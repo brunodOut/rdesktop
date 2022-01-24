@@ -5,11 +5,21 @@ known to work with Windows versions ranging from NT 4 Terminal Server
 to Windows 2012 R2 RDS. rdesktop currently has implemented the RDP version 4
 and 5 protocols.
 
+## Building
+To build  rdesktop,  the  exact  procedure  will  depend on
+whether you are  building  it  from  a release  or from git.
+Building from git source  code  requires an additional step
+at the beginning. Also, there are some build dependencies.
 
-## Installation
+### Dependencies
+To build rdesktop,  some  dependencies  must  be met. For a
+list, check [doc/DEPENDENCIES](doc/DEPENDENCIES). 
 
-rdesktop uses a GNU-style build procedure.  Typically all that is necessary
-to install rdesktop is the following:
+### Building From Release Source Code
+
+rdesktop uses a  GNU-style  build  procedure.  On  released
+source  of  rdesktop,  all  that  is  necessary  to install
+rdesktop is the following:
 
 	% ./configure
 	% make
@@ -23,11 +33,15 @@ later. To enable smart-card support in the rdesktop add `--enable-smartcard` to
 the configure line.
 
 
-## Note for users building from source
+### Building From Source
 
 If you have retrieved a snapshot of the rdesktop source, you will first
 need to run `./bootstrap` in order to generate the build infrastructure.
 This is not necessary for release versions of rdesktop.
+
+After  this  step,  you  can  follow  the  instructions for
+building  with  a  release  source  code  detailed  in  the
+previous section.
 
 
 ## Usage

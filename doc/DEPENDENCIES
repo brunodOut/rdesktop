@@ -1,0 +1,40 @@
+MANDATORY DEPENDENCIES
+- Core dependencies
+    - libX11 and headers
+    - libtasn1 and headers
+    - libXcursor and headers
+    - libnettle and headers
+    - libhogweed (often in same package as nettle)
+    - gnutls >= 3.2.0 and headers
+    - libiconv (if not in libc)
+
+OPTIONAL DEPENDENCIES
+- If you want dependency checks in the configure process:
+    - pkgconfig
+
+- If you want to enable fast memory error detection:
+    - address-sanitizer
+
+- If you want to use CredSSP (SSPI implementation):
+    - gss (FreeBSD)
+    - Kerberos and headers (Darwin)
+    - krb5-gssapi (GNU/Linux & Most Others)
+
+- If you want resktop to resize screen-dependent geometry:
+  when the screen size changes:
+    - libxrandr and headers
+
+- If you want to enable smartcard support:
+    - PCSC (Darwin)
+    - libpcsclite >= 1.6.0 (GNU/Linux & Others)
+
+- If you want sound support, you'll need at least one of
+  those:
+    - oss
+    - sgi
+    - sun
+    - alsa
+    - libdao
+
+- If you want support for sample rate support (assuming you're enabling sound):
+    - libsamplerate
